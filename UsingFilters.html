@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+	<title>Using AngularJS Directives and Data Binding</title>
+</head>
+<body ng-init="customers=[{name:'John Smith'},{name:'John Doe'},{name:'Jane Doe'}]">
+	Name:
+	</br>
+	<input type="text" data-ng-model="name" /> {{ name }}
+	
+	<ul>
+		<li ng-repeat="cust in customers | filter:name">{{cust.name }}</li>
+	</ul>
+	<script src="angular.min.js"></script>
+</body>
+
+</head>
